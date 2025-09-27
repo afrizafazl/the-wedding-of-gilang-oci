@@ -1,0 +1,887 @@
+/* ========================= */
+/* 🌸 Import Fonts Elegan    */
+/* ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Welcome screen */
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: url('background.jpg') no-repeat center center/cover,
+    linear-gradient(135deg, #f7e9dc, #e6d5c3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  padding: 2rem;
+}
+
+.welcome-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+  animation: zoomIn 1.8s ease;
+}
+
+.welcome-btn {
+  background: #b6895b;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.welcome-btn:hover {
+  transform: scale(1.05);
+  background: #a67849;
+}
+
+/* Transition clouds */
+.transition-clouds {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: #fff;
+  z-index: 9998;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.c1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+}
+
+.c2 {
+  width: 300px;
+  height: 300px;
+  top: 30%;
+  left: 50%;
+}
+
+.c3 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 30%;
+}
+
+.c4 {
+  width: 250px;
+  height: 250px;
+  top: 70%;
+  left: 70%;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.corner {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 80px;
+  height: 80px;
+  background: url('corner.png') no-repeat center/contain;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.tag {
+  font-size: 0.9rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #b6895b;
+  margin: 1rem 0;
+  animation: fadeInDown 2s ease;
+}
+
+.amp {
+  color: #a67849;
+}
+
+.date {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #b6895b;
+  margin: 1rem auto;
+}
+
+/* ========================= */
+/* ⏳ Countdown Elegan        */
+/* ========================= */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.countdown-item {
+  background: #fff;
+  border: 2px solid #b6895b;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  min-width: 65px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 1.5s ease;
+  transition: transform 0.3s;
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+}
+
+.countdown-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b6895b;
+  font-family: 'Playfair Display', serif;
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+/* Efek glow emas */
+.countdown-item.glow {
+  border-color: #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .countdown {
+    gap: 0.5rem;
+  }
+
+  .countdown-item {
+    padding: 0.6rem 0.7rem;
+    min-width: 55px;
+  }
+
+  .countdown-number {
+    font-size: 1.2rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Panel Elegan */
+.card-elegant {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card-elegant::before,
+.card-elegant::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.1;
+}
+
+.card-elegant::before {
+  top: -40px;
+  right: -40px;
+  background: url('decor-top.png') no-repeat center/contain;
+}
+
+.card-elegant::after {
+  bottom: -40px;
+  left: -40px;
+  background: url('decor-bottom.png') no-repeat center/contain;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a5673f;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Event Date */
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-date .day {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.event-date .date {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+}
+
+.event-date .month {
+  font-size: 1rem;
+  color: #444;
+}
+
+.event-time {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.event-location {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Tombol Outline */
+.btn-outline {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1.5px solid #a5673f;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #a5673f;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #a5673f;
+  color: #fff;
+}
+
+/* Mempelai */
+.mempelai-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mempelai-nama {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.mempelai-ortu {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.and {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a5673f;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.rekening-wrapper {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.rekening-item {
+  background: #fff8f3;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.rekening-item .highlight {
+  font-weight: bold;
+  color: #ad5d2b;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ad5d2b;
+  border-radius: 8px;
+  color: #ad5d2b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: #ad5d2b;
+  color: #fff;
+}
+
+
+/* Ucapan */
+.muted {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.thanks {
+  text-align: center;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 1rem;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Music button */
+.music-control {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Butterflies */
+.butterflies {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.butterfly {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('butterfly.png') no-repeat center/contain;
+  animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Stars */
+.stars {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ornaments */
+.ornament {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url('ornament.png') no-repeat center/contain;
+  opacity: 0.6;
+  animation: floatOrnament 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ornament.left {
+  top: 20%;
+  left: -40px;
+}
+
+.ornament.right {
+  bottom: 15%;
+  right: -40px;
+  animation-delay: 3s;
+}
+
+@keyframes floatOrnament {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Dark theme */
+body.dark {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+body.dark .card {
+  background: #2a2a2a;
+}
+
+body.dark .btn {
+  background: #f77f00;
+}
+
+body.dark .btn.secondary {
+  background: #00b4d8;
+}
+
+body.dark .bottom-nav {
+  background: #333;
+}
+
+body.dark .theme-toggle,
+body.dark .music-control {
+  background: #333;
+  color: #fff;
+}
+
+/* ========================= */
+/* ✨ Animations             */
+/* ========================= */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* 📱 Responsive adjustments */
+/* ========================= */
+@media (max-width: 768px) {
+  .names {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .bottom-nav {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .bottom-nav a {
+    font-size: 0.8rem;
+  }
+
+  .theme-toggle {
+    bottom: 4rem;
+    right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .music-control {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .names {
+    font-size: 1.8rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-btn {
+    width: 100%;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ========================= */
+/* 🌿 Reveal Scroll Effect   */
+/* ========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ /*========================= */
+/* 🌸 Section Divider Animasi 
+/* ========================= */
+/* .section-divider {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #f7e9dc, #e6d5c3, #f7e9dc);
+  opacity: 0.7;
+  margin: 2rem 0;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* Ornamen bunga di tengah divider */
+/* .section-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: url('ornament-divider.png') no-repeat center/contain;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  animation: flowerSwing 6s ease-in-out infinite;
+} */
+
+/* Divider Bergaris Animasi */
+/* Divider dengan animasi garis berjalan */
+.section-divider {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  /* animation: moveStripes 4s linear infinite; */
+}
+
+@keyframes moveStripes {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.svg1 {
+  width: 100%;
+  /* max-width: 599px; */
+  /* margin-top: -4em; */
+  position: absolute;
+  z-index: 4
+}
+
+.svg2 {
+  width: 100%;
+  /* max-width: 599px; */
+  /* margin-top: -3.5em; */
+  transform: rotate(180deg);
+  position: absolute;
+  z-index: 4
+}
+
+.wavies>use {
+  width: 100%;
+  max-width: 599px;
+  -webkit-animation: waveAround 12s linear infinite;
+  animation: waveAround 12s linear infinite
+}
+
+.wavies>use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s
+}
+
+.wavies>use:nth-child(2) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s
+}
+
+.wavies>use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s
+}
+
+@-webkit-keyframes waveAround {
+  0% {
+    transform: translate(-90px, 0%)
+  }
+
+  100% {
+    transform: translate(85px, 0%)
+  }
+}
+
+@keyframes waveAround {
+  0% {
+    transform: translate(-90px, 0%)
+  }
+
+  100% {
+    transform: translate(85px, 0%)
+  }
+}
+
+
+
+/* Animasi goyang lembut */
+@keyframes flowerSwing {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50%, -52%) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-50%, -48%) rotate(-3deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
