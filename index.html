@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Pernikahan – Gilang & Oci</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <audio id="bg-music" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-control" style="z-index: 9;" id="musicBtn">🔊</button>
+
+  <!-- Welcome screen -->
+  <div class="welcome-screen" id="welcome">
+    <h1 class="welcome-title">Undangan Pernikahan<br>Gilang & Oci</h1>
+    <button class="welcome-btn" id="openBtn">Buka Undangan</button>
+  </div>
+
+  <!-- Transition clouds -->
+  <div class="transition-clouds" id="clouds">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+
+  <!-- Butterflies container -->
+  <div class="butterflies" id="butterflies"></div>
+  <!-- Stars -->
+  <div class="stars" id="stars"></div>
+
+  <div class="container" id="page" style="display:none;">
+    <span class="corner"></span>
+    <header class="hero reveal">
+      <span class="tag">Undangan Pernikahan</span>
+      <h1 class="names">Gilang <span class="amp">&amp;</span> Oci</h1>
+      <div class="date">Minggu, 26 Oktober 2025 • 09.00 WIB</div>
+      <div class="divider"></div>
+
+      <!-- ✅ Countdown baru -->
+      <div class="countdown" id="countdown">
+        <div class="countdown-item glow">
+          <div class="countdown-number" id="days">00</div>
+          <div class="countdown-label">Hari</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="hours">00</div>
+          <div class="countdown-label">Jam</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="minutes">00</div>
+          <div class="countdown-label">Menit</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="seconds">00</div>
+          <div class="countdown-label">Detik</div>
+        </div>
+      </div>
+      <!-- ✅ Akhir countdown -->
+    </header>
+
+    <div class="section-divider"></div>
+
+    <section class="card-elegant reveal">
+      <h3 class="card-title">AKAD NIKAH</h3>
+      <div class="event-date">
+        <span class="day">Minggu</span>
+        <span class="date">26</span>
+        <span class="month">Oktober 2025</span>
+      </div>
+      <div class="event-time">09.00 WIB – Selesai</div>
+      <p class="event-location">Kediaman Mempelai</p>
+      <div class="btns">
+        <a class="btn-outline"
+          href="https://calendar.google.com/calendar/r/eventedit?text=Akad+Gilang+%26+Oci&dates=20251026T020000Z/20251026T040000Z&details=Akad+nikah&location=Kediaman+Mempelai"
+          target="_blank">Simpan ke Kalender</a>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+    </div>
+
+
+    <section class="card-elegant reveal">
+      <h3 class="card-title">RESEPSI</h3>
+      <div class="event-date">
+        <span class="day">Minggu</span>
+        <span class="date">26</span>
+        <span class="month">Oktober 2025</span>
+      </div>
+      <div class="event-time">09.00 WIB – Selesai</div>
+      <p class="event-location">Kp. Pusar RT 006/01 Binong, Kec. Curug, Kab. Tangerang – Banten</p>
+      <div class="btns">
+        <a class="btn-outline"
+          href="https://www.google.com/maps/search/?api=1&query=Kp.+Pusar+RT+006%2F01+Binong+Curug+Tangerang+Banten"
+          target="_blank">Lihat Lokasi</a>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+    </div>
+
+    <section class="card-elegant reveal">
+      <h3 class="card-title">MEMPELAI</h3>
+      <div class="mempelai-wrapper">
+        <div class="mempelai">
+          <p class="mempelai-nama"><strong>Gilang Darmawan Gilang</strong></p>
+          <p class="mempelai-ortu">Putra pertama dari<br>Bpk. Wani Setiawan &amp; Ibu Sunyah</p>
+        </div>
+        <div class="and">&amp;</div>
+        <div class="mempelai">
+          <p class="mempelai-nama"><strong>Siti Rosidah (Oci)</strong></p>
+          <p class="mempelai-ortu">Putri ke-2 dari<br>Bpk. Mahmud &amp; Ibu Minah</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Galeri Prewedding -->
+    <section id="gallery" class="card gallery">
+      <h3>Galeri Prewedding</h3>
+      <div class="gallery-grid">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpg" alt="Foto 4">
+        <img src="foto5.jpg" alt="Foto 5">
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+        preserveAspectRatio="none" width="100%" class="svg1" height="15" unselectable="on" style="user-select: none;">
+        <defs unselectable="on" style="user-select: none;">
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            unselectable="on" style="user-select: none;"></path>
+        </defs>
+        <g class="wavies" unselectable="on" style="user-select: none;">
+          <use xlink:href="#gentle-wave" x="15" y="0" fill="#ad5d2b50" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="3" fill="#ad5d2b70" unselectable="on" style="user-select: none;">
+          </use>
+          <use xlink:href="#gentle-wave" x="15" y="6" fill="#ad5d2b" unselectable="on" style="user-select: none;"></use>
+        </g>
+      </svg>
+    </div>
+
+    <section class="card reveal" id="ucapan" style="grid-column:1/-1">
+      <h3>Ucapan & Doa</h3>
+      <p class="muted">Atas kehadiran dan doa restunya Bapak/Ibu/Saudara/i, kami ucapkan terima kasih.</p>
+      <p class="muted">Wassalamu’alaikum Wr. Wb.</p>
+    </section>
+
+        <div class="section-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" width="100%" height="15">
+        <path d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" fill="#ad5d2b50"></path>
+      </svg>
+    </div>
+
+    <!-- Nomor Rekening -->
+        <!-- Nomor Rekening -->
+    <section class="card-elegant reveal" id="rekening">
+      <h3 class="card-title">Amplop Digital</h3>
+      <p class="muted">Bagi Bapak/Ibu/Saudara/i yang berkenan memberikan hadiah, dapat melalui nomor rekening berikut:</p>
+      
+      <div class="rekening-wrapper">
+  <div class="rekening-item">
+    <p><strong>CIMB Niaga</strong></p>
+    <p>No. Rekening: <span class="highlight">707006977500</span></p>
+    <p>a.n <em>Gilang Darmawan</em></p>
+    <a href="intent://transfer?account=707006977500#Intent;scheme=octomobile;package=com.cimb.niaga.mobile.lets;end"
+       class="btn-outline">
+       Transfer via OCTO Mobile
+    </a>
+  </div>
+
+  <div class="rekening-item">
+    <p><strong>CIMB Niaga</strong></p>
+    <p>No. Rekening: <span class="highlight">762944663500</span></p>
+    <p>a.n <em>Siti Rosidah</em></p>
+    <a href="intent://transfer?account=762944663500#Intent;scheme=octomobile;package=com.cimb.niaga.mobile.lets;end"
+       class="btn-outline">
+       Transfer via OCTO Mobile
+    </a>
+  </div>
+</div>
+
+
+      <p class="muted">Setelah transfer, mohon konfirmasi dengan mengirim bukti ke kontak berikut:</p>
+      <div class="btns">
+        <a class="btn-outline" href="https://wa.me/6281234567890?text=Halo%20saya%20sudah%20transfer%20amplop%20digital%20untuk%20Gilang%20%26%20Oci." target="_blank">💌 Konfirmasi via WhatsApp</a>
+      </div>
+
+      <p class="muted">Terima kasih atas doa dan restunya 🙏</p>
+    </section>
+
+
+
+    <p class="thanks">Kami yang berbahagia,<br><strong>Gilang &amp; Oci</strong></p>
+    <footer>© 2025 Gilang & Oci</footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="preview">
+  </div>
+
+  <button class="theme-toggle" id="themeBtn" style="z-index: 9;">🎨 Ganti Tema</button>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="#page">🏠 Beranda</a>
+    <a href="#ucapan">🙏 Ucapan</a>
+    <a href="#gallery">📸 Galeri</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Kp.+Pusar+RT+006%2F01+Binong+Curug+Tangerang+Banten"
+      target="_blank">📍 Lokasi</a>
+  </nav>
+
+  <script>
+    // Reveal on scroll
+    document.addEventListener("DOMContentLoaded", () => {
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
