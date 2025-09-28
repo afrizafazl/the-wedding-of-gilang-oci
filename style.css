@@ -23,7 +23,7 @@ body {
 .welcome-screen {
   position: fixed;
   inset: 0;
-  background: url('background.jpg') no-repeat center center/contain,
+  background: url('background.jpg') no-repeat center center/cover,
     linear-gradient(135deg, #f7e9dc, #e6d5c3);
   background-color: #f7e9dc; /* fallback kalau ada ruang kosong */
   display: flex;
