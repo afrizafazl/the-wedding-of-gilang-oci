@@ -489,22 +489,6 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Butterflies */
-.butterflies {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.butterfly {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: url('butterfly.png') no-repeat center/contain;
-  animation: fly 10s linear infinite;
-}
-
 @keyframes fly {
   0% {
     transform: translateY(100vh) rotate(0deg);

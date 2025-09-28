@@ -88,19 +88,6 @@ lightbox.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
 
-// =========================
-// 🦋 Generate Butterflies
-// =========================
-const butterflies = document.getElementById("butterflies");
-for (let i = 0; i < 6; i++) {
-  const bf = document.createElement("div");
-  bf.className = "butterfly";
-  bf.style.left = Math.random() * 100 + "vw";
-  bf.style.animationDuration = 8 + Math.random() * 5 + "s";
-  bf.style.animationDelay = Math.random() * 5 + "s";
-  butterflies.appendChild(bf);
-}
-
 // ⭐ Generate Stars
 const stars = document.getElementById("stars");
 for (let i = 0; i < 40; i++) {
