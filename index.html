@@ -258,38 +258,42 @@
       <p class="muted">Wassalamu’alaikum Wr. Wb.</p>
     </section>
 
-        <div class="section-divider">
+    <div class="section-divider">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" width="100%" height="15">
         <path d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" fill="#ad5d2b50"></path>
       </svg>
     </div>
 
     <!-- Nomor Rekening -->
-        <!-- Nomor Rekening -->
+    <!-- Nomor Rekening -->
     <section class="card-elegant reveal" id="rekening">
       <h3 class="card-title">Amplop Digital</h3>
-      <p class="muted">Bagi Bapak/Ibu/Saudara/i yang berkenan memberikan hadiah, dapat melalui nomor rekening berikut:</p>
-      
-      <div class="rekening-wrapper">
-  <div class="rekening-item">
-    <p><strong>CIMB Niaga</strong></p>
-    <p>No. Rekening: <span class="highlight">707006977500</span></p>
-    <p>a.n <em>Gilang Darmawan</em></p>
-    
-  </div>
+      <p class="muted">Bagi Bapak/Ibu/Saudara/i yang berkenan memberikan hadiah, dapat melalui nomor rekening berikut:
+      </p>
 
-  <div class="rekening-item">
-    <p><strong>CIMB Niaga</strong></p>
-    <p>No. Rekening: <span class="highlight">762944663500</span></p>
-    <p>a.n <em>Siti Rosidah</em></p>
-    
-  </div>
-</div>
+      <div class="rekening-wrapper">
+        <div class="rekening-item">
+          <p><strong>CIMB Niaga</strong></p>
+          <p>No. Rekening: <span class="highlight">707006977500</span></p>
+          <p>a.n <em>Gilang Darmawan</em></p>
+
+
+        </div>
+
+        <div class="rekening-item">
+          <p><strong>CIMB Niaga</strong></p>
+          <p>No. Rekening: <span class="highlight">762944663500</span></p>
+          <p>a.n <em>Siti Rosidah</em></p>
+
+        </div>
+      </div>
 
 
       <p class="muted">Setelah transfer, mohon konfirmasi dengan mengirim bukti ke kontak berikut:</p>
       <div class="btns">
-        <a class="btn-outline" href="https://wa.me/6281234567890?text=Halo%20saya%20sudah%20transfer%20amplop%20digital%20untuk%20Gilang%20%26%20Oci." target="_blank">💌 Konfirmasi via WhatsApp</a>
+        <a class="btn-outline"
+          href="https://wa.me/6281234567890?text=Halo%20saya%20sudah%20transfer%20amplop%20digital%20untuk%20Gilang%20%26%20Oci."
+          target="_blank">💌 Konfirmasi via WhatsApp</a>
       </div>
 
       <p class="muted">Terima kasih atas doa dan restunya 🙏</p>
@@ -334,6 +338,13 @@
   </script>
 
   <script src="script.js"></script>
+  <script>
+    function copyRekening(noRek) {
+      navigator.clipboard.writeText(noRek).then(() => {
+        alert("Nomor rekening " + noRek + " berhasil disalin ✅");
+      });
+    }
+  </script>
 </body>
 
 </html>
