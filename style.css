@@ -23,9 +23,8 @@ body {
 .welcome-screen {
   position: fixed;
   inset: 0;
-  background: url('background.jpg') no-repeat center center/cover,
+  background: url('background.jpg') no-repeat center center / cover,
     linear-gradient(135deg, #f7e9dc, #e6d5c3);
-  background-color: #f7e9dc; /* fallback kalau ada ruang kosong */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +32,13 @@ body {
   z-index: 9999;
   text-align: center;
   padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .welcome-screen {
+    background: url('background.jpg') no-repeat center -350px / cover,
+      linear-gradient(135deg, #f7e9dc, #e6d5c3);
+  }
 }
 
 .welcome-title {
