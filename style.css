@@ -250,14 +250,14 @@ body {
   text-align: center;
 }
 
-.card-elegant::before,
+/* .card-elegant::before,
 .card-elegant::after {
   content: "";
   position: absolute;
   width: 120px;
   height: 120px;
   opacity: 0.1;
-}
+} */
 
 .card-elegant::before {
   top: -40px;
@@ -270,6 +270,23 @@ body {
   left: -40px;
   background: url('decor-bottom.png') no-repeat center/contain;
 }
+
+
+/* ✅ Mobile fullscreen fit */
+@media (max-width: 768px) {
+  .card-elegant {
+    width: 100%;             /* full lebar */
+    min-height: 100vh;        /* fallback */
+    min-height: 100dvh;       /* lebih akurat di mobile */
+    margin: 0;                /* hilangkan margin */
+    border-radius: 0;         /* biar edge-to-edge */
+    padding: 2rem 1rem;       /* padding lebih rapat */
+    display: flex;            /* biar konten bisa align tengah */
+    flex-direction: column;
+    justify-content: center;  /* konten rata tengah vertikal */
+  }
+}
+
 
 .card-title {
   font-family: "Playfair Display", serif;
@@ -696,13 +713,15 @@ body.dark .music-control {
 
   .theme-toggle {
     bottom: 4rem;
-    right: 0.5rem;
+    /* right: 0.5rem; */
+    right: 2rem;
     padding: 0.4rem 0.8rem;
   }
 
   .music-control {
     top: 0.5rem;
-    right: 0.5rem;
+    /* right: 0.5rem; */
+    right: 2rem;
     padding: 0.5rem;
   }
 }
