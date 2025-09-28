@@ -119,15 +119,6 @@ body {
   z-index: 1;
 }
 
-.corner {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 80px;
-  height: 80px;
-  background: url('corner.png') no-repeat center/contain;
-}
-
 /* Hero */
 .hero {
   text-align: center;
