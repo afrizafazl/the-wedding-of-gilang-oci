@@ -255,6 +255,19 @@ body {
 
 /* flower */
 /* Sudut atas kiri */
+.card-elegant {
+  position: relative;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Atas kiri */
 .card-elegant::before {
   content: "";
   position: absolute;
@@ -262,13 +275,13 @@ body {
   left: 15px;
   width: 100px;
   height: 100px;
-  background: url('flower.png') no-repeat center/contain;
+  background: url("flower.png") no-repeat center/contain;
   opacity: 0.9;
   transform: rotate(0deg);
   pointer-events: none;
 }
 
-/* Sudut bawah kanan */
+/* Bawah kanan */
 .card-elegant::after {
   content: "";
   position: absolute;
@@ -276,11 +289,40 @@ body {
   right: 15px;
   width: 100px;
   height: 100px;
-  background: url('flower.png') no-repeat center/contain;
+  background: url("flower.png") no-repeat center/contain;
   opacity: 0.9;
   transform: rotate(180deg);
   pointer-events: none;
 }
+
+/* Trik tambahan: gunakan pseudo-element di dalam :is() */
+.card-elegant:is(.top-right)::before,
+.card-elegant:is(.bottom-left)::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url("flower.png") no-repeat center/contain;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Atas kanan */
+.card-elegant:is(.top-right)::before {
+  top: 15px;
+  right: 15px;
+  transform: rotate(90deg);
+  left: auto;
+}
+
+/* Bawah kiri */
+.card-elegant:is(.bottom-left)::after {
+  bottom: 15px;
+  left: 15px;
+  transform: rotate(270deg);
+  right: auto;
+}
+
 
 
 /* ✅ Mobile fullscreen fit */
