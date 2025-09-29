@@ -241,15 +241,6 @@ body {
   text-align: center;
 }
 
-/* .card-elegant::before,
-.card-elegant::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  opacity: 0.1;
-} */
-
 .card-elegant::before {
   top: -40px;
   right: -40px;
@@ -260,6 +251,35 @@ body {
   bottom: -40px;
   left: -40px;
   background: url('decor-bottom.png') no-repeat center/contain;
+}
+
+/* flower */
+/* Sudut atas kiri */
+.card-elegant::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100px;
+  height: 100px;
+  background: url('flower.png') no-repeat center/contain;
+  opacity: 0.9;
+  transform: rotate(0deg);
+  pointer-events: none;
+}
+
+/* Sudut bawah kanan */
+.card-elegant::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 100px;
+  height: 100px;
+  background: url('flower.png') no-repeat center/contain;
+  opacity: 0.9;
+  transform: rotate(180deg);
+  pointer-events: none;
 }
 
 
@@ -276,6 +296,7 @@ body {
     flex-direction: column;
     justify-content: center;  /* konten rata tengah vertikal */
   }
+
 }
 
 
