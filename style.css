@@ -300,8 +300,8 @@ body {
 .card-elegant:is(.bottom-left)::after {
   content: "";
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 160px;   /* ✅ ukuran lebih besar */
+  height: 160px;
   background: url("flower.png") no-repeat center/contain;
   opacity: 0.9;
   pointer-events: none;
