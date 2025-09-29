@@ -253,8 +253,6 @@ body {
   background: url('decor-bottom.png') no-repeat center/contain;
 }
 
-/* flower */
-/* Sudut atas kiri */
 .card-elegant {
   position: relative;
   max-width: 800px;
@@ -274,12 +272,12 @@ body {
     url("flower.png");  /* bawah kanan */
 
   background-repeat: no-repeat;
-  background-size: clamp(140px, 20vw, 200px); /* responsif lebih besar */
+  background-size: clamp(120px, 18vw, 180px); /* biar nggak terlalu besar */
   background-position: 
-    top 15px left 15px,     /* atas kiri */
-    top 15px right 15px,    /* atas kanan */
-    bottom 15px left 15px,  /* bawah kiri */
-    bottom 15px right 15px; /* bawah kanan */
+    top 10px left 10px,     /* atas kiri */
+    top 10px right 10px,    /* atas kanan */
+    bottom 10px left 10px,  /* bawah kiri */
+    bottom 10px right 10px; /* bawah kanan */
 }
 
 
