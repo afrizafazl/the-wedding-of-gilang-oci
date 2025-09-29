@@ -265,63 +265,23 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   text-align: center;
   overflow: hidden;
+
+  /* 🌸 Bunga di semua sudut */
+  background-image: 
+    url("flower.png"),  /* atas kiri */
+    url("flower.png"),  /* atas kanan */
+    url("flower.png"),  /* bawah kiri */
+    url("flower.png");  /* bawah kanan */
+
+  background-repeat: no-repeat;
+  background-size: clamp(140px, 20vw, 200px); /* responsif lebih besar */
+  background-position: 
+    top 15px left 15px,     /* atas kiri */
+    top 15px right 15px,    /* atas kanan */
+    bottom 15px left 15px,  /* bawah kiri */
+    bottom 15px right 15px; /* bawah kanan */
 }
 
-/* Atas kiri */
-.card-elegant::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 100px;
-  height: 100px;
-  background: url("flower.png") no-repeat center/contain;
-  opacity: 0.9;
-  transform: rotate(0deg);
-  pointer-events: none;
-}
-
-/* Bawah kanan */
-.card-elegant::after {
-  content: "";
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 100px;
-  height: 100px;
-  background: url("flower.png") no-repeat center/contain;
-  opacity: 0.9;
-  transform: rotate(180deg);
-  pointer-events: none;
-}
-
-/* Trik tambahan: gunakan pseudo-element di dalam :is() */
-.card-elegant:is(.top-right)::before,
-.card-elegant:is(.bottom-left)::after {
-  content: "";
-  position: absolute;
-  width: 160px;   /* ✅ ukuran lebih besar */
-  height: 160px;
-  background: url("flower.png") no-repeat center/contain;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-/* Atas kanan */
-.card-elegant:is(.top-right)::before {
-  top: 15px;
-  right: 15px;
-  transform: rotate(90deg);
-  left: auto;
-}
-
-/* Bawah kiri */
-.card-elegant:is(.bottom-left)::after {
-  bottom: 15px;
-  left: 15px;
-  transform: rotate(270deg);
-  right: auto;
-}
 
 
 
