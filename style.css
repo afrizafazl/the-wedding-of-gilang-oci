@@ -251,6 +251,26 @@ body {
 }
 
 /* 🌸 dekorasi bunga default (desktop) */
+.card-elegant {
+  position: relative;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* pastikan teks selalu di atas bunga */
+.card-elegant * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🌸 Dekorasi default (desktop) */
 .card-elegant .flower {
   position: absolute;
   width: clamp(100px, 15vw, 160px);
@@ -261,36 +281,22 @@ body {
   z-index: 1;
 }
 
-.card-elegant .flower-tl { top: 0; left: 0; transform: translate(-25%, -25%) rotate(0deg); }
-.card-elegant .flower-tr { top: 0; right: 0; transform: translate(25%, -25%) rotate(90deg); }
-.card-elegant .flower-bl { bottom: 0; left: 0; transform: translate(-25%, 25%) rotate(270deg); }
-.card-elegant .flower-br { bottom: 0; right: 0; transform: translate(25%, 25%) rotate(180deg); }
+.card-elegant .flower-tl { top: 0; left: 0; transform: translate(-20%, -20%) rotate(0deg); }
+.card-elegant .flower-tr { top: 0; right: 0; transform: translate(20%, -20%) rotate(90deg); }
+.card-elegant .flower-bl { bottom: 0; left: 0; transform: translate(-20%, 20%) rotate(270deg); }
+.card-elegant .flower-br { bottom: 0; right: 0; transform: translate(20%, 20%) rotate(180deg); }
 
-/* 📱 Mobile: perkecil + geser keluar lebih jauh */
+/* 📱 Mobile: kecilkan sedikit, jangan terlalu keluar */
 @media (max-width: 600px) {
   .card-elegant .flower {
-    width: 60px;
-    height: 60px;
+    width: 70px;   /* tetap kelihatan */
+    height: 70px;
     opacity: 0.7;
   }
-  .card-elegant .flower-tl { transform: translate(-60%, -60%) rotate(0deg); }
-  .card-elegant .flower-tr { transform: translate(60%, -60%) rotate(90deg); }
-  .card-elegant .flower-bl { transform: translate(-60%, 60%) rotate(270deg); }
-  .card-elegant .flower-br { transform: translate(60%, 60%) rotate(180deg); }
-}
-
-
-/* 📱 Mobile fix: kecilkan & geser keluar */
-@media (max-width: 600px) {
-  .card-elegant .flower {
-    width: clamp(60px, 20vw, 90px);
-    height: clamp(60px, 20vw, 90px);
-    opacity: 0.75;
-  }
-  .card-elegant .flower-tl { transform: translate(-35%, -35%) rotate(0deg); }
-  .card-elegant .flower-tr { transform: translate(35%, -35%) rotate(90deg); }
-  .card-elegant .flower-bl { transform: translate(-35%, 35%) rotate(270deg); }
-  .card-elegant .flower-br { transform: translate(35%, 35%) rotate(180deg); }
+  .card-elegant .flower-tl { transform: translate(-30%, -30%) rotate(0deg); }
+  .card-elegant .flower-tr { transform: translate(30%, -30%) rotate(90deg); }
+  .card-elegant .flower-bl { transform: translate(-30%, 30%) rotate(270deg); }
+  .card-elegant .flower-br { transform: translate(30%, 30%) rotate(180deg); }
 }
 
 
