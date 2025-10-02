@@ -230,6 +230,28 @@ body {
   margin-top: 2rem;
 }
 
+
+/* 🎀 Base Style */
+.card-elegant {
+  position: relative;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  text-align: center;
+  overflow: hidden;
+  color: #333;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+
+  /* 🎨 Lapisan background:
+     1. Warna putih (atas, untuk isi card tetap bersih)
+     2. Gambar bunga (bawah, biar jadi bingkai) */
+  background: 
+    #fffdf9, 
+    url("bg2.webp") no-repeat center center / cover;
+}
+
+
 /* Panel Elegan */
 .card-elegant {
   position: relative;
