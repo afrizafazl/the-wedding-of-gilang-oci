@@ -232,7 +232,6 @@ body {
 
 /* Panel Elegan */
 .card-elegant {
-  position: relative;
   max-width: 800px;
   margin: 2.5rem auto;
   padding: 2.5rem 2rem;
@@ -240,69 +239,50 @@ body {
   background: #fffdf9;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+.card-elegant {
+  position: relative;
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
   overflow: hidden;
   z-index: 1;
 }
 
-/* Pastikan isi card selalu di atas bunga */
-.card-elegant * {
-  position: relative;
-  z-index: 2;
-}
-
-/* 🌸 Dekorasi bunga default */
+/* 🌸 Bunga semua sudut (default untuk desktop) */
 .card-elegant .flower {
   position: absolute;
-  width: clamp(90px, 15vw, 150px);
-  height: clamp(90px, 15vw, 150px);
+  width: clamp(80px, 18vw, 160px);
+  height: clamp(80px, 18vw, 160px);
   background: url("flower.png") no-repeat center/contain;
   opacity: 0.85;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
-/* Sudut atas kiri */
-.card-elegant .flower-tl { 
-  top: 0; 
-  left: 0; 
-  transform: translate(-20%, -20%) rotate(0deg); 
-}
+.card-elegant .flower-tl { top: 8px; left: 8px; transform: rotate(0deg); }
+.card-elegant .flower-tr { top: 8px; right: 8px; transform: rotate(90deg); }
+.card-elegant .flower-bl { bottom: 8px; left: 8px; transform: rotate(270deg); }
+.card-elegant .flower-br { bottom: 8px; right: 8px; transform: rotate(180deg); }
 
-/* Sudut atas kanan */
-.card-elegant .flower-tr { 
-  top: 0; 
-  right: 0; 
-  transform: translate(20%, -20%) rotate(90deg); 
-}
-
-/* Sudut bawah kiri */
-.card-elegant .flower-bl { 
-  bottom: 0; 
-  left: 0; 
-  transform: translate(-20%, 20%) rotate(270deg); 
-}
-
-/* Sudut bawah kanan */
-.card-elegant .flower-br { 
-  bottom: 0; 
-  right: 0; 
-  transform: translate(20%, 20%) rotate(180deg); 
-}
-
-/* 📱 Mobile fix: kecilkan & geser keluar */
+/* 📱 Mobile fix: hanya tampil 2 bunga (atas kiri & bawah kanan) */
 @media (max-width: 600px) {
-  .card-elegant .flower {
-    width: clamp(60px, 20vw, 90px);
-    height: clamp(60px, 20vw, 90px);
-    opacity: 0.75;
+  .card-elegant .flower-tr,
+  .card-elegant .flower-bl {
+    display: none; /* sembunyikan bunga kanan atas & kiri bawah */
   }
-  .card-elegant .flower-tl { transform: translate(-35%, -35%) rotate(0deg); }
-  .card-elegant .flower-tr { transform: translate(35%, -35%) rotate(90deg); }
-  .card-elegant .flower-bl { transform: translate(-35%, 35%) rotate(270deg); }
-  .card-elegant .flower-br { transform: translate(35%, 35%) rotate(180deg); }
+
+  .card-elegant .flower {
+    width: clamp(60px, 22vw, 100px);
+    height: clamp(60px, 22vw, 100px);
+    opacity: 0.7; /* lebih samar */
+  }
 }
-
-
 
 
 /* ✅ Mobile fullscreen fit */
