@@ -244,20 +244,21 @@ body {
   z-index: 1;
 }
 
+/* Pastikan isi card selalu di atas bunga */
 .card-elegant * {
   position: relative;
-  z-index: 1; /* isi card selalu di atas bunga */
+  z-index: 2;
 }
 
-/* 🌸 Dekorasi bunga */
+/* 🌸 Dekorasi bunga default */
 .card-elegant .flower {
   position: absolute;
-  width: clamp(120px, 18vw, 180px);
-  height: clamp(120px, 18vw, 180px);
+  width: clamp(90px, 15vw, 150px);
+  height: clamp(90px, 15vw, 150px);
   background: url("flower.png") no-repeat center/contain;
-  opacity: 0.9;
+  opacity: 0.85;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* Sudut atas kiri */
@@ -286,6 +287,19 @@ body {
   bottom: 0; 
   right: 0; 
   transform: translate(20%, 20%) rotate(180deg); 
+}
+
+/* 📱 Mobile fix: kecilkan & geser keluar */
+@media (max-width: 600px) {
+  .card-elegant .flower {
+    width: clamp(60px, 20vw, 90px);
+    height: clamp(60px, 20vw, 90px);
+    opacity: 0.75;
+  }
+  .card-elegant .flower-tl { transform: translate(-35%, -35%) rotate(0deg); }
+  .card-elegant .flower-tr { transform: translate(35%, -35%) rotate(90deg); }
+  .card-elegant .flower-bl { transform: translate(-35%, 35%) rotate(270deg); }
+  .card-elegant .flower-br { transform: translate(35%, 35%) rotate(180deg); }
 }
 
 
