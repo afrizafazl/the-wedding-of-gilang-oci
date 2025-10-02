@@ -232,28 +232,6 @@ body {
 
 /* Panel Elegan */
 .card-elegant {
-  max-width: 800px;
-  margin: 2.5rem auto;
-  padding: 2.5rem 2rem;
-  border-radius: 18px;
-  background: #fffdf9;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card-elegant::before {
-  top: -40px;
-  right: -40px;
-  background: url('decor-top.png') no-repeat center/contain;
-}
-
-.card-elegant::after {
-  bottom: -40px;
-  left: -40px;
-  background: url('decor-bottom.png') no-repeat center/contain;
-}
-
-.card-elegant {
   position: relative;
   max-width: 800px;
   margin: 2.5rem auto;
@@ -263,23 +241,48 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   text-align: center;
   overflow: hidden;
-
-  /* 🌸 Bunga di semua sudut */
-  background-image: 
-    url("flower.png"),  /* atas kiri */
-    url("flower.png"),  /* atas kanan */
-    url("flower.png"),  /* bawah kiri */
-    url("flower.png");  /* bawah kanan */
-
-  background-repeat: no-repeat;
-  background-size: clamp(120px, 18vw, 180px); /* biar nggak terlalu besar */
-  background-position: 
-    top 10px left 10px,     /* atas kiri */
-    top 10px right 10px,    /* atas kanan */
-    bottom 10px left 10px,  /* bawah kiri */
-    bottom 10px right 10px; /* bawah kanan */
+  z-index: 1;
 }
 
+.card-elegant * {
+  position: relative;
+  z-index: 1; /* isi card selalu di atas bunga */
+}
+
+/* 🌸 Dekorasi bunga */
+.card-elegant .flower {
+  position: absolute;
+  width: clamp(120px, 18vw, 180px);
+  height: clamp(120px, 18vw, 180px);
+  background: url("flower.png") no-repeat center/contain;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-elegant .flower-tl { 
+  top: 10px; 
+  left: 10px; 
+  transform: rotate(0deg); 
+}
+
+.card-elegant .flower-tr { 
+  top: 10px; 
+  right: 10px; 
+  transform: rotate(90deg); 
+}
+
+.card-elegant .flower-bl { 
+  bottom: 10px; 
+  left: 10px; 
+  transform: rotate(270deg); 
+}
+
+.card-elegant .flower-br { 
+  bottom: 10px; 
+  right: 10px; 
+  transform: rotate(180deg); 
+}
 
 
 
